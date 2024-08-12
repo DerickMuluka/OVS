@@ -1,0 +1,243 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F4F6F9; /* Light background color */
+    color: #333; /* Darker text color for better readability */
+    padding-bottom: 60px; /* Add padding at the bottom to ensure content doesn't overlap with the footer */
+    font-size: 16px; /* Increased font size */
+}
+
+/* Header Styles */
+header {
+    background-color: #003366; /* Dark blue background */
+    color: #fff;
+    padding: 20px 0; /* Increased padding for better visibility */
+    text-align: center;
+    position: fixed; /* Fix the header to the top */
+    top: 0;
+    width: 100%; /* Full width */
+    z-index: 1000; /* Ensure it stays on top of other content */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Enhanced shadow */
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 64, 128, 0.9); /* Semi-transparent blue background */
+    padding: 15px; /* Increased padding for better spacing */
+    position: fixed; /* Fix the navbar to the top */
+    top: 80px; /* Space for the header */
+    width: 100%; /* Full width */
+    z-index: 1000; /* Ensure it stays on top of other content */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow for navbar */
+}
+
+.navbar .nav-link {
+    color: #e6f7ff; /* Light blue color for links */
+    text-decoration: none;
+    padding: 12px 24px;
+    margin: 0 10px;
+    transition: color 0.3s, background-color 0.3s, border-radius 0.3s;
+    font-weight: bold; /* Emphasize link text */
+    font-size: 18px; /* Increased font size */
+}
+
+.navbar .nav-link:hover {
+    color: #003366; /* Dark blue color on hover */
+    background-color: #e6f7ff; /* Light background on hover */
+    border-radius: 5px; /* Rounded corners for hover effect */
+}
+
+.navbar .nav-link.active {
+    background-color: #001f3f; /* Even darker blue for active state */
+    color: #e6f7ff; /* Light blue text for active state */
+}
+
+/* Admin Login Button */
+.admin-login:hover {
+    background-color: #003d52; /* Darker teal on hover */
+    color: #fff; /* White text on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.admin-login {
+    background-color: #005f73;
+    color: #f0f4f8;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 16px; /* Increased font size */
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
+
+/* Container Padding for Fixed Header and Navbar */
+.container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding-top: 150px; /* Increased space for fixed header and navbar */
+    padding-bottom: 60px; /* Add space at the bottom for footer */
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    font-size: 16px; /* Increased font size for labels */
+    color: #555; /* Darker color for labels to differentiate from placeholders */
+    margin-bottom: 5px; /* Space between label and input */
+}
+
+form input[type="text"],
+form input[type="password"],
+form input[type="file"],
+form select {
+    margin-bottom: 15px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+form input[type="text"]::placeholder,
+form input[type="password"]::placeholder,
+form select::placeholder {
+    color: #aaa; /* Light color for placeholders */
+}
+
+form input[type="text"]:focus,
+form input[type="password"]:focus,
+form input[type="file"]:focus,
+form select:focus {
+    border-color: #003366; /* Dark blue border on focus */
+    box-shadow: 0 0 5px rgba(0, 51, 102, 0.3); /* Shadow effect on focus */
+}
+
+form input[type="submit"] {
+    background-color: #004080; /* Blue background for button */
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    font-size: 16px; /* Increased font size */
+}
+
+form input[type="submit"]:hover {
+    background-color: #003366; /* Darker blue on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+form input[type="submit"].active {
+    background-color: #001f3f; /* Even darker blue for active state */
+}
+
+/* Error and Success Messages */
+.error-message {
+    color: #D8000C; /* Red color for error text */
+    background-color: #FFD2D2; /* Light red background */
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 16px; /* Increased font size */
+}
+
+.success-message {
+    color: #4CAF50; /* Green color for success text */
+    background-color: #DFF2BF; /* Light green background */
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 16px; /* Increased font size */
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    font-size: 16px; /* Increased font size */
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+/* Dashboard Links */
+.dashboard-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.dashboard-links a {
+    flex: 1 1 calc(33.333% - 30px);
+    text-align: center;
+    padding: 15px;
+    background-color: #004080; /* Blue background */
+    color: #e6f7ff; /* Light blue text */
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+    font-size: 16px; /* Increased font size */
+}
+
+.dashboard-links a:hover {
+    background-color: #003366; /* Darker blue background on hover */
+    color: #e6f7ff; /* Light blue text on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.dashboard-links a.active {
+    background-color: #001f3f; /* Even darker blue for active state */
+    color: #e6f7ff; /* Light blue text for active state */
+}
+
+/* Footer */
+footer {
+    background-color: #003366; /* Dark blue background */
+    color: #fff;
+    padding: 10px 20px; /* Reduced padding for a more compact footer */
+    text-align: center;
+    position: fixed; /* Fix the footer to the bottom */
+    bottom: 0;
+    left: 0;
+    width: 100%; /* Full width to stretch across the page */
+    margin: 0; /* Remove margin to fit flush with the page edges */
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1); /* Shadow at the top */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .navbar .nav-link {
+        margin: 5px 0;
+    }
+
+    .dashboard-links a {
+        flex: 1 1 100%;
+    }
+}
