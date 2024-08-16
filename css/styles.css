@@ -11,7 +11,7 @@ body {
 
 /* Header Styles */
 header {
-    background-color: #003366; /* Dark blue background */
+    /*background-color: #4CAF50; /* Green background */
     color: #fff;
     padding: 20px 0; /* Increased padding for better visibility */
     text-align: center;
@@ -26,7 +26,7 @@ header {
 .navbar {
     display: flex;
     justify-content: center;
-    background-color: rgba(0, 64, 128, 0.9); /* Semi-transparent blue background */
+    /*background-color: rgba(255, 152, 0, 0.5); /* Semi-transparent green background */
     padding: 15px; /* Increased padding for better spacing */
     position: fixed; /* Fix the navbar to the top */
     top: 80px; /* Space for the header */
@@ -36,7 +36,7 @@ header {
 }
 
 .navbar .nav-link {
-    color: #e6f7ff; /* Light blue color for links */
+    color: #ffffff; /* White color for links */
     text-decoration: none;
     padding: 12px 24px;
     margin: 0 10px;
@@ -46,32 +46,32 @@ header {
 }
 
 .navbar .nav-link:hover {
-    color: #003366; /* Dark blue color on hover */
-    background-color: #e6f7ff; /* Light background on hover */
+    color: #333; /* Dark color on hover for better contrast */
+    background-color: rgba(255, 152, 0, 0.5); /* Light blue background on hover */
     border-radius: 5px; /* Rounded corners for hover effect */
 }
 
 .navbar .nav-link.active {
-    background-color: #001f3f; /* Even darker blue for active state */
-    color: #e6f7ff; /* Light blue text for active state */
+    background-color: #FF9800; /* Light blue for active state */
+    color: #ffffff; /* White text for active state */
 }
 
 /* Admin Login Button */
-.admin-login:hover {
-    background-color: #003d52; /* Darker teal on hover */
-    color: #fff; /* White text on hover */
-    transform: scale(1.05); /* Slightly enlarge on hover */
-}
-
 .admin-login {
-    background-color: #005f73;
-    color: #f0f4f8;
+    background-color: #FF9800; /* Updated to orange background */
+    color: #fff;
     padding: 10px 15px;
     border-radius: 8px;
     font-size: 16px; /* Increased font size */
     text-align: center;
     text-decoration: none;
     transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
+
+.admin-login:hover {
+    background-color: #FF5722; /* Darker orange-red on hover */
+    color: #fff; /* White text on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
 }
 
 /* Container Padding for Fixed Header and Navbar */
@@ -118,12 +118,12 @@ form input[type="text"]:focus,
 form input[type="password"]:focus,
 form input[type="file"]:focus,
 form select:focus {
-    border-color: #003366; /* Dark blue border on focus */
-    box-shadow: 0 0 5px rgba(0, 51, 102, 0.3); /* Shadow effect on focus */
+    border-color: #4CAF50; /* Green border on focus */
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.3); /* Shadow effect on focus */
 }
 
 form input[type="submit"] {
-    background-color: #004080; /* Blue background for button */
+    background-color: #FF9800; /* Updated to orange background */
     color: #fff;
     padding: 12px;
     border: none;
@@ -134,12 +134,12 @@ form input[type="submit"] {
 }
 
 form input[type="submit"]:hover {
-    background-color: #003366; /* Darker blue on hover */
+    background-color: #F44336; /* Red on hover */
     transform: scale(1.05); /* Slightly enlarge on hover */
 }
 
 form input[type="submit"].active {
-    background-color: #001f3f; /* Even darker blue for active state */
+    background-color: #F44336; /* Red for active state */
 }
 
 /* Error and Success Messages */
@@ -194,8 +194,8 @@ th {
     flex: 1 1 calc(33.333% - 30px);
     text-align: center;
     padding: 15px;
-    background-color: #004080; /* Blue background */
-    color: #e6f7ff; /* Light blue text */
+    background-color: #FF9800; /* Updated to orange background */
+    color: #fff; /* White text */
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s, color 0.3s, transform 0.2s;
@@ -203,19 +203,19 @@ th {
 }
 
 .dashboard-links a:hover {
-    background-color: #003366; /* Darker blue background on hover */
-    color: #e6f7ff; /* Light blue text on hover */
+    background-color: #F44336; /* Red on hover */
+    color: #fff; /* White text on hover */
     transform: scale(1.05); /* Slightly enlarge on hover */
 }
 
 .dashboard-links a.active {
-    background-color: #001f3f; /* Even darker blue for active state */
-    color: #e6f7ff; /* Light blue text for active state */
+    background-color: #F44336; /* Red for active state */
+    color: #fff; /* White text for active state */
 }
 
 /* Footer */
 footer {
-    background-color: #003366; /* Dark blue background */
+    background-color: #003366; /* Green background */
     color: #fff;
     padding: 10px 20px; /* Reduced padding for a more compact footer */
     text-align: center;
