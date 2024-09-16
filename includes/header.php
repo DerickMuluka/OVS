@@ -5,7 +5,6 @@
             <a href="http://localhost/online_voting_system/index.php" class="nav-link <?php echo basename($_SERVER['PHP_SELF']) == 'index.php' ? 'active' : ''; ?>">Home</a>
             <a href="http://localhost/online_voting_system/info/how_it_works.php" class="nav-link <?php echo basename($_SERVER['PHP_SELF']) == 'how_it_works.php' ? 'active' : ''; ?>">How It Works</a>
             <a href="http://localhost/online_voting_system/voter/register.php" class="nav-link <?php echo basename($_SERVER['PHP_SELF']) == 'register.php' ? 'active' : ''; ?>">Register</a>
-            <a href="http://localhost/online_voting_system/voter/login.php" class="nav-link <?php echo basename($_SERVER['PHP_SELF']) == 'login.php' ? 'active' : ''; ?>">Login</a>
             <a href="http://localhost/online_voting_system/info/about_us.php" class="nav-link <?php echo basename($_SERVER['PHP_SELF']) == 'about_us.php' ? 'active' : ''; ?>">About Us</a>
             <a href="http://localhost/online_voting_system/info/logout.php" class="nav-link <?php echo basename($_SERVER['PHP_SELF']) == 'logout.php' ? 'active' : ''; ?>">Logout</a>
         </div>
