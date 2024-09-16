@@ -48,6 +48,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <title>Admin Login</title>
     <link rel="stylesheet" type="text/css" href="../css/styles.css">
+    <!-- FontAwesome for the eye icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         .form-input {
             margin-bottom: 15px;
@@ -60,13 +62,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         .password-container {
             position: relative;
         }
-        .password-container input[type="password"] {
+        .password-container input[type="password"], 
+        .password-container input[type="text"] {
             padding-right: 40px;
         }
         .password-toggle {
             position: absolute;
             right: 10px;
-            top: 37%;
+            top: 50%;
             transform: translateY(-50%);
             cursor: pointer;
             font-size: 1.2em;
@@ -96,7 +99,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <input type="text" name="username" placeholder="Username" required><br>
             <div class="password-container">
                 <input type="password" name="password" id="password" placeholder="Password" class="form-input" required>
-                <span class="password-toggle" onclick="togglePasswordVisibility()">👁️</span>
+                <!-- Use FontAwesome for eye icon -->
+                <span class="password-toggle" onclick="togglePasswordVisibility()">
+                    <i class="fas fa-eye" id="toggleIcon"></i>
+                </span>
             </div><br>
             <input type="submit" value="Login">
         </form>
@@ -106,15 +112,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <script>
         function togglePasswordVisibility() {
             var passwordInput = document.getElementById("password");
-            var passwordToggle = document.querySelector(".password-toggle");
+            var toggleIcon = document.getElementById("toggleIcon");
             if (passwordInput.type === "password") {
                 passwordInput.type = "text";
-                passwordToggle.textContent = "🙈";
+                toggleIcon.classList.remove("fa-eye");
+                toggleIcon.classList.add("fa-eye-slash");
             } else {
                 passwordInput.type = "password";
-                passwordToggle.textContent = "👁️";
+                toggleIcon.classList.remove("fa-eye-slash");
+                toggleIcon.classList.add("fa-eye");
             }
         }
     </script>
 </body>
 </html>
+
