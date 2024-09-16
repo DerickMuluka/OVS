@@ -94,6 +94,8 @@ $total_voters = $result_total_voters->fetch_assoc();
 <head>
     <title>Voter Registration</title>
     <link rel="stylesheet" type="text/css" href="../css/styles.css">
+    <!-- FontAwesome for the eye icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         .form-input {
             margin-bottom: 15px;
@@ -106,13 +108,14 @@ $total_voters = $result_total_voters->fetch_assoc();
         .password-container {
             position: relative;
         }
-        .password-container input[type="password"] {
+        .password-container input[type="password"], 
+        .password-container input[type="text"] {
             padding-right: 40px;
         }
         .password-toggle {
             position: absolute;
             right: 10px;
-            top: 37%;
+            top: 50%;
             transform: translateY(-50%);
             cursor: pointer;
             font-size: 1.2em;
@@ -136,9 +139,13 @@ $total_voters = $result_total_voters->fetch_assoc();
             <input type="email" name="email" placeholder="Email Address" class="form-input" required><br>
             <div class="password-container">
                 <input type="password" name="password" id="password" placeholder="Password" class="form-input" required>
-                <span class="password-toggle" onclick="togglePasswordVisibility()">👁️</span>
+                <!-- Use FontAwesome for eye icon -->
+                <span class="password-toggle" onclick="togglePasswordVisibility()">
+                    <i class="fas fa-eye" id="toggleIcon"></i>
+                </span>
             </div><br>
             <input type="submit" value="Register" class="form-input">
+            <p>Already have an account? <a href="login.php">Log in here</a>.</p>
         </form>
         <h3>Total Registered Voters: <?php echo $total_voters['total_voters']; ?></h3>
     </div>
@@ -146,13 +153,15 @@ $total_voters = $result_total_voters->fetch_assoc();
     <script>
         function togglePasswordVisibility() {
             var passwordInput = document.getElementById("password");
-            var passwordToggle = document.querySelector(".password-toggle");
+            var toggleIcon = document.getElementById("toggleIcon");
             if (passwordInput.type === "password") {
                 passwordInput.type = "text";
-                passwordToggle.textContent = "🙈";
+                toggleIcon.classList.remove("fa-eye");
+                toggleIcon.classList.add("fa-eye-slash");
             } else {
                 passwordInput.type = "password";
-                passwordToggle.textContent = "👁️";
+                toggleIcon.classList.remove("fa-eye-slash");
+                toggleIcon.classList.add("fa-eye");
             }
         }
     </script>
